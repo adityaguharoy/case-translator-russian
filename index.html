@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///C:/Users/month/Downloads/ruscase_constraint_translator_analyzer.html -->
+<html lang="en" class="h-full"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RusCase Constraint Translator &amp; Analyzer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="./index_files/saved_resource"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="./index_files/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="./index_files/css2" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .tooltip-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.bottom-5{bottom:1.25rem}.right-0{right:0px}.right-5{right:1.25rem}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1\.5{margin-bottom:0.375rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-3{margin-left:0.75rem}.mr-1\.5{margin-right:0.375rem}.mr-2{margin-right:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-16{height:4rem}.h-2\.5{height:0.625rem}.h-32{height:8rem}.h-4{height:1rem}.h-full{height:100%}.min-h-\[400px\]{min-height:400px}.min-h-full{min-height:100%}.w-10{width:2.5rem}.w-16{width:4rem}.w-2\.5{width:0.625rem}.w-32{width:8rem}.w-4{width:1rem}.w-72{width:18rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.max-w-sm{max-width:24rem}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-full{--tw-translate-y:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2\.5{gap:0.625rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-800\/60 > :not([hidden]) ~ :not([hidden]){border-color:rgb(30 41 59 / 0.6)}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-indigo-500\/20{border-color:rgb(99 102 241 / 0.2)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/50{border-color:rgb(51 65 85 / 0.5)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-800\/60{border-color:rgb(30 41 59 / 0.6)}.border-slate-800\/80{border-color:rgb(30 41 59 / 0.8)}.border-t-transparent{border-top-color:transparent}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-indigo-500\/10{background-color:rgb(99 102 241 / 0.1)}.bg-indigo-500\/5{background-color:rgb(99 102 241 / 0.05)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/60{background-color:rgb(30 41 59 / 0.6)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-slate-950\/60{background-color:rgb(2 6 23 / 0.6)}.bg-slate-950\/80{background-color:rgb(2 6 23 / 0.8)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgb(79 70 229 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-violet-500{--tw-gradient-to:#8b5cf6 var(--tw-gradient-to-position)}.to-violet-600{--tw-gradient-to:#7c3aed var(--tw-gradient-to-position)}.p-1{padding:0.25rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-4{padding-bottom:1rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-slate-600::placeholder{--tw-placeholder-opacity:1;color:rgb(71 85 105 / var(--tw-placeholder-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-indigo-500\/20{--tw-shadow-color:rgb(99 102 241 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-indigo-600\/30{--tw-shadow-color:rgb(79 70 229 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.blur-2xl{--tw-blur:blur(40px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.selection\:bg-indigo-500 *::selection{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-indigo-500::selection{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:border-slate-700:hover{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:from-indigo-500:hover{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgb(99 102 241 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-violet-500:hover{--tw-gradient-to:#8b5cf6 var(--tw-gradient-to-position)}.hover\:text-indigo-300:hover{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.hover\:text-slate-300:hover{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.focus\:border-transparent:focus{border-color:transparent}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:0.4}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-slate-950 text-slate-100 min-h-full flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                    <i class="fa-solid fa-language text-white text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg text-white tracking-tight">RusCase Constraint</h1>
+                    <p class="text-xs text-slate-400">Translator &amp; Grammatical Analyzer</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                    <i class="fa-solid fa-bolt mr-1.5 text-xs"></i> Powered by Gemini 3 Flash
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left Column: Controls & Input (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Input Card -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <div class="flex items-center justify-between mb-4">
+                    <label for="englishInput" class="block text-sm font-semibold text-slate-200">
+                        <i class="fa-solid fa-pen-to-square text-indigo-400 mr-2"></i> English Sentence
+                    </label>
+                    <div class="flex space-x-1">
+                        <button onclick="loadPreset(0)" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md transition">Preset 1</button>
+                        <button onclick="loadPreset(1)" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md transition">Preset 2</button>
+                    </div>
+                </div>
+
+                <textarea id="englishInput" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition resize-none" placeholder="Enter an English sentence to translate and constrain..."></textarea>
+
+                <!-- Case Selection Section -->
+                <div class="mt-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-sm font-semibold text-slate-200">
+                            <i class="fa-solid fa-filter text-indigo-400 mr-2"></i> Allowed Russian Cases
+                        </span>
+                        <div class="space-x-2">
+                            <button onclick="toggleAllCases(true)" class="text-xs text-indigo-400 hover:text-indigo-300 font-medium">Select All</button>
+                            <span class="text-slate-700">|</span>
+                            <button onclick="toggleAllCases(false)" class="text-xs text-slate-400 hover:text-slate-300 font-medium">Deselect All</button>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 mb-3">The sentence will be restructured so that <strong>only</strong> the checked cases are used.</p>
+
+                    <!-- Case Checkboxes Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <!-- Nominative -->
+                        <label class="flex items-start p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 cursor-pointer transition group">
+                            <input type="checkbox" name="russianCase" value="Nominative" checked="" class="mt-0.5 h-4 w-4 rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-900">
+                            <div class="ml-3 text-xs">
+                                <span class="font-medium text-slate-200 group-hover:text-white block">Nominative <span class="text-slate-500 font-normal">(Именительный)</span></span>
+                                <span class="text-slate-400 text-[11px]">Subject / Who, What</span>
+                            </div>
+                        </label>
+                        <!-- Genitive -->
+                        <label class="flex items-start p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 cursor-pointer transition group">
+                            <input type="checkbox" name="russianCase" value="Genitive" checked="" class="mt-0.5 h-4 w-4 rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-900">
+                            <div class="ml-3 text-xs">
+                                <span class="font-medium text-slate-200 group-hover:text-white block">Genitive <span class="text-slate-500 font-normal">(Родительный)</span></span>
+                                <span class="text-slate-400 text-[11px]">Possession / Absence</span>
+                            </div>
+                        </label>
+                        <!-- Dative -->
+                        <label class="flex items-start p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 cursor-pointer transition group">
+                            <input type="checkbox" name="russianCase" value="Dative" checked="" class="mt-0.5 h-4 w-4 rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-900">
+                            <div class="ml-3 text-xs">
+                                <span class="font-medium text-slate-200 group-hover:text-white block">Dative <span class="text-slate-500 font-normal">(Дательный)</span></span>
+                                <span class="text-slate-400 text-[11px]">Recipient / To whom</span>
+                            </div>
+                        </label>
+                        <!-- Accusative -->
+                        <label class="flex items-start p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 cursor-pointer transition group">
+                            <input type="checkbox" name="russianCase" value="Accusative" checked="" class="mt-0.5 h-4 w-4 rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-900">
+                            <div class="ml-3 text-xs">
+                                <span class="font-medium text-slate-200 group-hover:text-white block">Accusative <span class="text-slate-500 font-normal">(Винительный)</span></span>
+                                <span class="text-slate-400 text-[11px]">Direct object</span>
+                            </div>
+                        </label>
+                        <!-- Instrumental -->
+                        <label class="flex items-start p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 cursor-pointer transition group">
+                            <input type="checkbox" name="russianCase" value="Instrumental" checked="" class="mt-0.5 h-4 w-4 rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-900">
+                            <div class="ml-3 text-xs">
+                                <span class="font-medium text-slate-200 group-hover:text-white block">Instrumental <span class="text-slate-500 font-normal">(Творительный)</span></span>
+                                <span class="text-slate-400 text-[11px]">By means / With</span>
+                            </div>
+                        </label>
+                        <!-- Prepositional -->
+                        <label class="flex items-start p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 cursor-pointer transition group">
+                            <input type="checkbox" name="russianCase" value="Prepositional" checked="" class="mt-0.5 h-4 w-4 rounded border-slate-700 text-indigo-600 focus:ring-indigo-500 bg-slate-900">
+                            <div class="ml-3 text-xs">
+                                <span class="font-medium text-slate-200 group-hover:text-white block">Prepositional <span class="text-slate-500 font-normal">(Предложный)</span></span>
+                                <span class="text-slate-400 text-[11px]">Location / About</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button onclick="generateTranslation()" id="translateBtn" class="mt-6 w-full py-3.5 px-4 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-medium rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Generate Constrained Sentence</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Column: Output & Analysis (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Output Display Card -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl min-h-[400px] flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <h2 class="font-semibold text-slate-200 text-sm">Constrained Russian Output</h2>
+                        </div>
+                        <button onclick="speakSentence()" id="speakSentenceBtn" disabled="" class="text-xs bg-slate-800 hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed text-slate-200 px-3 py-1.5 rounded-lg transition flex items-center space-x-1.5">
+                            <i class="fa-solid fa-volume-high text-indigo-400"></i>
+                            <span>Pronounce Sentence</span>
+                        </button>
+                    </div>
+
+                    <!-- Placeholder / Loading / Result Area -->
+                    <div id="outputContainer" class="space-y-6">
+                        <div id="initialState" class="py-16 text-center">
+                            <div class="w-16 h-16 rounded-2xl bg-slate-800/60 border border-slate-700/50 flex items-center justify-center mx-auto mb-4 text-slate-500">
+                                <i class="fa-solid fa-feather text-2xl"></i>
+                            </div>
+                            <h3 class="text-slate-300 font-medium text-sm">Ready to translate &amp; analyze</h3>
+                            <p class="text-slate-500 text-xs mt-1 max-w-sm mx-auto">Enter an English sentence, choose your case constraints, and click generate to see the tailored Russian sentence.</p>
+                        </div>
+
+                        <div id="loadingState" class="hidden py-16 text-center space-y-4">
+                            <div class="inline-block animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
+                            <p class="text-slate-400 text-sm font-medium animate-pulse">Restructuring sentence under case constraints...</p>
+                        </div>
+
+                        <div id="resultState" class="hidden space-y-6">
+                            <!-- Generated Sentence Words Span Container -->
+                            <div>
+                                <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider block mb-2">Hover or tap any word for dictionary &amp; case info:</span>
+                                <div id="sentenceWordsBox" class="p-5 bg-slate-950 border border-slate-800 rounded-xl text-xl font-medium leading-relaxed flex flex-wrap gap-2.5 items-center">
+                                    <!-- Dynamic word spans injected here -->
+                                </div>
+                            </div>
+
+                            <!-- Explanation Box -->
+                            <div class="p-4 bg-slate-950/60 border border-slate-800/80 rounded-xl">
+                                <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 flex items-center">
+                                    <i class="fa-solid fa-circle-info text-indigo-400 mr-1.5"></i> Grammatical Adaptation Note
+                                </h4>
+                                <p id="explanationText" class="text-xs text-slate-400 leading-relaxed"></p>
+                            </div>
+
+                            <!-- Word Analysis Table / Grid -->
+                            <div>
+                                <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">Word-by-Word Breakdown</h4>
+                                <div class="overflow-x-auto border border-slate-800 rounded-xl">
+                                    <table class="w-full text-left text-xs">
+                                        <thead class="bg-slate-950 text-slate-400 uppercase font-semibold border-b border-slate-800">
+                                            <tr>
+                                                <th class="px-4 py-3">Word</th>
+                                                <th class="px-4 py-3">Lemma</th>
+                                                <th class="px-4 py-3">Part of Speech</th>
+                                                <th class="px-4 py-3">Case</th>
+                                                <th class="px-4 py-3">Meaning</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="wordTableBody" class="divide-y divide-slate-800/60 text-slate-300">
+                                            <!-- Rows injected here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer note inside card -->
+                <div class="pt-6 mt-6 border-t border-slate-800/60 text-center text-[11px] text-slate-500">
+                    RusCase Constraint Translator &amp; Analyzer • Built with Gemini API
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Word Tooltip Card (Interactive Hover Card) -->
+    <div id="wordTooltip" class="fixed hidden z-50 bg-slate-900 border border-slate-700 shadow-2xl rounded-xl p-4 w-72 pointer-events-none transform -translate-x-1/2 -translate-y-full mb-3 transition-all duration-150">
+        <div class="flex items-center justify-between mb-2">
+            <span id="tipSurface" class="font-bold text-base text-white"></span>
+            <button id="tipAudioBtn" onclick="speakWord(event)" class="text-indigo-400 hover:text-indigo-300 p-1 rounded transition pointer-events-auto">
+                <i class="fa-solid fa-volume-high text-sm"></i>
+            </button>
+        </div>
+        <div class="space-y-1.5 text-xs text-slate-300 border-t border-slate-800 pt-2">
+            <div class="flex justify-between">
+                <span class="text-slate-500">Dictionary Form:</span>
+                <span id="tipLemma" class="font-medium text-indigo-300"></span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-slate-500">Part of Speech:</span>
+                <span id="tipPos" class="font-medium text-slate-200"></span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-slate-500">Case:</span>
+                <span id="tipCase" class="font-medium text-emerald-400"></span>
+            </div>
+            <div class="flex justify-between pt-1 border-t border-slate-800/60">
+                <span class="text-slate-500">Meaning:</span>
+                <span id="tipMeaning" class="font-medium text-slate-200 text-right"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Toast / Modal -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-slate-800 border border-slate-700 text-slate-200 px-4 py-3 rounded-xl shadow-2xl text-xs flex items-center space-x-2">
+        <i class="fa-solid fa-circle-exclamation text-amber-400"></i>
+        <span id="toastMsg">Error message here</span>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        const presets = [
+            "The cat gives a book to the friend in the room.",
+            "The student reads a book about science in the library."
+        ];
+
+        function loadPreset(index) {
+            document.getElementById('englishInput').value = presets[index];
+        }
+
+        function toggleAllCases(select) {
+            const checkboxes = document.querySelectorAll('input[name="russianCase"]');
+            checkboxes.forEach(cb => cb.checked = select);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        let currentSentenceText = "";
+        let activeWordData = null;
+
+        async function generateTranslation() {
+            const englishInput = document.getElementById('englishInput').value.trim();
+            if (!englishInput) {
+                showToast("Please enter an English sentence first.");
+                return;
+            }
+
+            const checkboxes = document.querySelectorAll('input[name="russianCase"]:checked');
+            const selectedCases = Array.from(checkboxes).map(cb => cb.value);
+
+            if (selectedCases.length === 0) {
+                showToast("Please select at least one Russian case constraint.");
+                return;
+            }
+
+            // UI states
+            document.getElementById('initialState').classList.add('hidden');
+            document.getElementById('resultState').classList.add('hidden');
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('translateBtn').disabled = true;
+            document.getElementById('speakSentenceBtn').disabled = true;
+
+            const systemPrompt = "You are an expert Russian linguist and translation engine. Given an English sentence and a list of allowed Russian cases, translate or rewrite the sentence into Russian such that all nouns, pronouns, and adjectives strictly use ONLY the selected Russian cases (Nominative, Genitive, Dative, Accusative, Instrumental, Prepositional). If standard grammar requires a forbidden case, restructure the sentence, choose synonyms, or use alternative prepositions so that only allowed cases appear. Return valid JSON matching the requested schema.";
+
+            const userPrompt = `English sentence: "${englishInput}"\nAllowed Russian cases: ${selectedCases.join(', ')}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userPrompt }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            russianSentence: { type: "STRING" },
+                            explanation: { type: "STRING" },
+                            words: {
+                                type: "ARRAY",
+                                items: {
+                                    type: "OBJECT",
+                                    properties: {
+                                        surface: { type: "STRING" },
+                                        lemma: { type: "STRING" },
+                                        pos: { type: "STRING" },
+                                        case: { type: "STRING" },
+                                        englishMeaning: { type: "STRING" }
+                                    },
+                                    required: ["surface", "lemma", "pos", "case", "englishMeaning"]
+                                }
+                            }
+                        },
+                        required: ["russianSentence", "explanation", "words"]
+                    }
+                }
+            };
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            let success = false;
+            let resultData = null;
+            let retries = 0;
+            const maxRetries = 4;
+            let delay = 1000;
+
+            while (!success && retries < maxRetries) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    const candidate = result.candidates?.[0];
+                    if (candidate && candidate.content?.parts?.[0]?.text) {
+                        const jsonText = candidate.content.parts[0].text;
+                        resultData = JSON.parse(jsonText);
+                        success = true;
+                    } else {
+                        throw new Error("Invalid response structure from Gemini API");
+                    }
+                } catch (err) {
+                    retries++;
+                    if (retries >= maxRetries) {
+                        document.getElementById('loadingState').classList.add('hidden');
+                        document.getElementById('initialState').classList.remove('hidden');
+                        document.getElementById('translateBtn').disabled = false;
+                        showToast("Failed to generate translation. Please try again.");
+                        console.error(err);
+                        return;
+                    }
+                    await new Promise(res => setTimeout(res, delay));
+                    delay *= 2;
+                }
+            }
+
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('translateBtn').disabled = false;
+
+            if (resultData) {
+                renderResult(resultData);
+            }
+        }
+
+        function renderResult(data) {
+            currentSentenceText = data.russianSentence;
+            document.getElementById('explanationText').innerText = data.explanation;
+
+            // Render interactive words
+            const wordsBox = document.getElementById('sentenceWordsBox');
+            wordsBox.innerHTML = '';
+
+            data.words.forEach((w) => {
+                const span = document.createElement('span');
+                span.className = "cursor-pointer px-1.5 py-0.5 rounded hover:bg-indigo-600/30 hover:text-indigo-200 transition relative";
+                span.innerText = w.surface;
+                
+                // Event listeners for hover and touch
+                span.addEventListener('mouseenter', (e) => showWordTooltip(e, w));
+                span.addEventListener('mouseleave', hideWordTooltip);
+                span.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showWordTooltip(e, w);
+                });
+
+                wordsBox.appendChild(span);
+            });
+
+            // Render table breakdown
+            const tableBody = document.getElementById('wordTableBody');
+            tableBody.innerHTML = '';
+
+            data.words.forEach(w => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-900/50 transition";
+                tr.innerHTML = `
+                    <td class="px-4 py-3 font-semibold text-white">${w.surface}</td>
+                    <td class="px-4 py-3 text-indigo-300">${w.lemma}</td>
+                    <td class="px-4 py-3 text-slate-400">${w.pos}</td>
+                    <td class="px-4 py-3 text-emerald-400">${w.case}</td>
+                    <td class="px-4 py-3 text-slate-300">${w.englishMeaning}</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+
+            document.getElementById('resultState').classList.remove('hidden');
+            document.getElementById('speakSentenceBtn').disabled = false;
+        }
+
+        function showWordTooltip(event, wordObj) {
+            activeWordData = wordObj;
+            const tooltip = document.getElementById('wordTooltip');
+            document.getElementById('tipSurface').innerText = wordObj.surface;
+            document.getElementById('tipLemma').innerText = wordObj.lemma;
+            document.getElementById('tipPos').innerText = wordObj.pos;
+            document.getElementById('tipCase').innerText = wordObj.case;
+            document.getElementById('tipMeaning').innerText = wordObj.englishMeaning;
+
+            const rect = event.target.getBoundingClientRect();
+            tooltip.style.left = `${rect.left + rect.width / 2}px`;
+            tooltip.style.top = `${rect.top - 8 + window.scrollY}px`;
+            tooltip.classList.remove('hidden');
+        }
+
+        function hideWordTooltip() {
+            const tooltip = document.getElementById('wordTooltip');
+            tooltip.classList.add('hidden');
+        }
+
+        // Close tooltip on global click
+        window.addEventListener('click', () => {
+            hideWordTooltip();
+        });
+
+        // Web Speech API functions
+        function speakSentence() {
+            if (!currentSentenceText) return;
+            if (!('speechSynthesis' in window)) {
+                showToast("Speech synthesis not supported in this browser.");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(currentSentenceText);
+            utterance.lang = 'ru-RU';
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function speakWord(event) {
+            event.stopPropagation();
+            if (!activeWordData || !activeWordData.surface) return;
+            if (!('speechSynthesis' in window)) {
+                showToast("Speech synthesis not supported in this browser.");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(activeWordData.surface);
+            utterance.lang = 'ru-RU';
+            utterance.rate = 0.85;
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+
+</body></html>
